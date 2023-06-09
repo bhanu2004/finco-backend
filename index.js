@@ -73,11 +73,8 @@ app.post('/signup',async(req,res)=>{
             password:password,
         })
         await user.save();
+        res.send("data saved");
         
-
-        // if(password == cpassword){
-        //     const regis
-        // }
     }catch(error){
         res.send({status:"error"});
     }
